@@ -1,0 +1,21 @@
+# Get the required data
+
+data<-iris
+print(data)
+
+#party is a package for decision making 
+
+install.packages("party")
+
+#After installing check whether it is properly installed
+
+library(party)
+
+# codes to fetch the decision
+
+decisiontree<-ctree(Species~Sepal.Length+Sepal.Width+Petal.Length+Petal.Width, data=data)
+decision tree
+
+#Then plot the tree
+
+plot(decisiontree)
